@@ -54,3 +54,24 @@ public class Client {
         
     }
 }
+/* Odpowiedzi na pytania:
+
+1. Proszę o podanie głównego celu zastosowania wzorca strategii:
+
+Pozwala na tworzenie rodziny algorytmów umieszczonych w osobnych klasach, 
+dając możliwość wymiany obiektów tych klas między nimi.
+
+2. Czy istnieje możliwość zmiany algorytmu w czasie działania programu?
+
+Tak, umożliwia to zastosowanie Strategii, jednak należałoby stworzyć odpowiednią metodę.
+
+3. W jaki sposób wzorzec enkapsuluje poszczególne algorytmy?
+
+W postaci klas, gdzie dane przekazywane są przez klasę Context i interfejs
+
+4. Kiedy stosować wzorzec strategii?
+
+Gdy możemy znaleźć różne rozwiązania dla różnych przypadków dla tego samego typu danych np. przy sortowaniu,
+sprawdzanie który algorytm radzi sobie najlepiej w różnych przypadkach, ale na jednych danych.
+
+*/
