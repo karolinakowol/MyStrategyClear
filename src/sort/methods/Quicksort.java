@@ -9,7 +9,7 @@ package sort.methods;
  *
  * @author LeopardProMK
  */
-public class Quicksort {
+public class Quicksort implements ISortStrategy{
     /* http://www.algorytm.org/algorytmy-sortowania/sortowanie-szybkie-quicksort/quick-j.html */
      
 
@@ -52,7 +52,7 @@ public class Quicksort {
         }
     
     }
-    public static void Sort(double[] arr){
+    public void Sort(double[] arr){
     
         QuickSort(arr,0,arr.length-1);
        

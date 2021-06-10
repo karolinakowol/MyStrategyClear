@@ -9,9 +9,9 @@ package sort.methods;
  *
  * @author LeopardProMK
  */
-public class Selectionsort {
+public class Selectionsort implements ISortStrategy{
     
-    public static void SelectionSort(double[] arr)
+    public  void Sort(double[] arr)
     {
         int n = arr.length;
  

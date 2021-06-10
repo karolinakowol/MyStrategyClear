@@ -6,6 +6,10 @@
 package mystrategy;
 
 import data.DataGenerator;
+import sort.methods.Bubblesort;
+import sort.methods.Insertionsort;
+import sort.methods.Quicksort;
+import sort.methods.Selectionsort;
 
 /**
  *
@@ -21,11 +25,32 @@ public class Client {
         /* Algorytmy sortowania */
         // http://www.algorytm.org/algorytmy-sortowania/
         
+        
         double[] dataNonSort = DataGenerator.generate(100000);
+        double[] datacopy= dataNonSort.clone();
+        
+        /*Bubblesort.Sort(dataNonSort);
+        Insertionsort.Sort(dataNonSort);
+        Quicksort.Sort(dataNonSort, 0, 0);
+        Selectionsort.Sort(dataNonSort); */
         
        /* Wzorzec Stratega */
         //...
-       
-        System.out.println("Time: ??");
+        
+        Context c = new Context(new Bubblesort());      
+        System.out.println("Bubblesort Time:" + c.Sort(dataNonSort));
+        
+        Context c2 = new Context(new Insertionsort());
+        dataNonSort = datacopy.clone();
+        System.out.println("Insertionsort Time:" + c2.Sort(dataNonSort) );
+             
+        Context c3 = new Context(new Quicksort());
+        dataNonSort= datacopy.clone();
+        System.out.println("Quicksort Time:" + c3.Sort(dataNonSort) );
+        
+        Context c4 = new Context(new Selectionsort());
+        dataNonSort= datacopy.clone();
+        System.out.println("Selectionsort Time:" + c4.Sort(dataNonSort) );
+        
     }
 }

@@ -9,9 +9,9 @@ package sort.methods;
  *
  * @author LeopardProMK
  */
-public class Insertionsort {
+public class Insertionsort implements ISortStrategy{
     
-    public static void Insertionsort (double arr[])
+    public void Sort (double arr[])
     {
         int n = arr.length;
         for (int i = 1; i < n; ++i) {
